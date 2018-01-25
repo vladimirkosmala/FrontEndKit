@@ -18,4 +18,8 @@ It was made with "recent browsers" in mind, starting from EDGE.
 
 ### Documentation
 
-See the "showroom" inside the [docs folder](./docs).
+```bash
+cd FrontEndKit
+node serve-folder.js
+open http://localhost:9000/css/docs/showroom.html
+```
