@@ -9,7 +9,7 @@ It uses the last powerful concepts of hyperscript, diffing algorithms and reacti
 Not published on NPM yet. Just copy the JS folder in your public folder.
 
 ```js
-import {Observable, h, render} from 'FrontEndKit/js/index.js'
+import {Observable, h, mount} from 'FrontEndKit/js/index.js'
 
 // The model
 class Model extends Observable {
@@ -43,7 +43,7 @@ function view(model) {
 
 // The controller
 const model = new Model();
-model.observe((model => render(document.body, view(model))));
+mount(document.body, view, model);
 
 ```
 
