@@ -13,8 +13,6 @@ This library relies mainly on this tools which are well documented, just Google 
 * [Virtual Nodes](concepts/vnodes.md)
 * [Keys](concepts/keys.md)
 * [Components](concepts/components.md)
-* [Lifecycle Events](concepts/lifecycle-events.md)
-* [Sanitation](concepts/sanitation.md)
 
 ### Tutorials
 
