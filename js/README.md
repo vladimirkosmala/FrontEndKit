@@ -60,4 +60,4 @@ It was made with "recent browsers" in mind, Firefox could not work (ES6 modules)
 
 ### Documentation
 
-See the "showroom" inside the [docs folder](./docs).
+See the [docs folder](./docs).
