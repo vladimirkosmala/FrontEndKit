@@ -43,7 +43,7 @@ mount(document.body, view, model);
 
 This will show on the screen a counter which can be incremented or decremented.
 
-See it in action on your browser:
+See it in action in your browser:
 
 ```bash
 cd FrontEndKit
