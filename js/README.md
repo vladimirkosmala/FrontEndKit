@@ -8,7 +8,8 @@ It uses the last powerful concepts of hyperscript, diffing algorithms and reacti
 
 Not published on NPM yet. Just copy the JS folder in your public folder.
 
-```js
+```html
+<script type="module">
 import {Observable, h, mount} from 'FrontEndKit/js/index.js'
 
 // The model
@@ -44,7 +45,7 @@ function view(model) {
 // The controller
 const model = new Model();
 mount(document.body, view, model);
-
+</script>
 ```
 
 ### Compatibility
