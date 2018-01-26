@@ -4,6 +4,8 @@ This CSS Kit contains reusable tools and components to create a web page or a we
 
 The API is inspired of Bootstrap Twitter and Foundation but with desktop/tablet in mind with a focus on the 80% most used functionalities to keep the API small and maintainable for years.
 
+[Demo showroom](https://vladimirkosmala.github.io/FrontEndKit/css/docs/showroom.html)
+
 ### Usage
 
 Not published on NPM yet. Just copy the CSS file in your public folder.
