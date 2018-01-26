@@ -1,3 +1,6 @@
 [submodule "js/src/picodom"]
 	path = js/src/picodom
 	url = git@github.com:picodom/picodom.git
+[submodule "js/src/mithril.js"]
+	path = js/src/mithril.js
+	url = https://github.com/MithrilJS/mithril.js.git
