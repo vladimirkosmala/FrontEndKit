@@ -3,7 +3,7 @@
 This library uses the MVC pattern, let's see the example:
 
 ```js
-import {Observable, h, render, frameDebouncer, patch} from '../../src/index.js'
+import {Observable, h, mount} from '../../src/index.js'
 
 // The model
 class Model extends Observable {
