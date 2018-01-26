@@ -30,9 +30,9 @@ This is a valid minimal web application.
 
 Now let's import FrontEndKit, add this to the previous:
 ```html
-<link rel="stylesheet" href="./css/src/bootstrap.css">
+<link rel="stylesheet" href="../css/src/bootstrap.css">
 <script type="module">
-import {Observable, h, mount} from './js/src/index.js'
+import {Observable, h, mount} from '../js/src/index.js'
 </script>
 ```
 
