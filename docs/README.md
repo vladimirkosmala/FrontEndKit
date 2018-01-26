@@ -218,14 +218,15 @@ The first function returns the chorno like this "00:00" and the second is a help
 
 You can put those functions after the view and calls `chrono` instead of `model.remaining`. Don't forget to pass the `model` to `chrono`, it is easier to always pass the same variable so anywhere in your views you can access all the data from the model.
 
-Finally, let's replace the single button by an array of buttons from the list `model.times`. To obtain the names of the pasta, we get the keys `Object.keys(model.times)` and we map it to produce for each one a new button.
+Finally, let's replace the *single button* by an *array of buttons* from the list `model.times`. To obtain the names of the pasta, we get the keys `Object.keys(model.times)`, this will give `['penne','spaghetti','rotini','farfalle','macaroni']` dynamically and we map it to produce for each one a new button.
 
 ```js
-Object.keys(model.times).map(name => [
-  h('button.button.default', {onclick: e => model.start(name)}, name),
-  ' '
-])
+Object.keys(model.times).map(name => h('button.button.default', {onclick: e => model.start(name)}, name))
 ```
+
+The functional way is well done here, we only have one expression and no side effect.
+
+When a timer starts, the `currentPasta` is set, we can use it to *activate* the button concerned so the user has a feedback on which pasta he has clicked. This will change the class of the button to `active` (see the CSS framework) or nothing.
 
 ```js
 Object.keys(model.times).map(name => [
@@ -234,8 +235,9 @@ Object.keys(model.times).map(name => [
 ])
 ```
 
-TODO: copy final file
-TODO: finish text
+Perfect, we can replace `h('button', ...)` by the above code. I also added a space `' '` to avoid collapsing the buttons, spaces are explicit with hyperscript, with HTML we would have just put a new line for the same job, creating a textNode with spaces. Notice the new array containing this space and the button.
 
+This is the end. Congratulations! 🎉
 
-Congratulations! 🎉
+The final tutorial result can be find here [http://localhost:9000/docs/tuto-final.html](http://localhost:9000/docs/tuto-final.html).
+
