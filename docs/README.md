@@ -36,7 +36,7 @@ import {Observable, h, mount} from '../js/src/index.js'
 </script>
 ```
 
-We imported the CSS and JS tools. On the browser, open the inspector with a right-click. The console and network tabs are your best friend to debug your application. There should be no error nor 404, only status 200.
+We imported the CSS and JS tools. On the browser, open the inspector with a right-click. The console and network tabs are your best friends to debug your application. There should be no error nor 404, only status 200.
 
 ### Step 3 - model
 
@@ -64,7 +64,7 @@ class PastaTimer extends Observable {
 }
 ```
 
-Put this code after the import statement. We created some attributes in the model by declaring them inside the constructor. The model is observable, if it changes, it will notify() others who have observe() this model. Because we extends the Observable class, we need the `super()` statement. The cooking times are set inside an object used as a hashmap: string -> number.
+Put this code after the import statement. We created some attributes in the model by declaring them inside the constructor. The model is observable, if it changes, it will *notify()* others who have *observe()d* this model. Because we extends the Observable class, we need the `super()` statement. The cooking times are set inside an object used as a hashmap: string -> number.
 
 To manipulate the model we also need:
 * a method to start the timer
@@ -108,7 +108,7 @@ So we added three methods to the model. The start method begins a Javascript tim
 
 The stop method clears the interval timer and notify observers.
 
-Fianlly the update method decrease the remaining time by a delta set inside the interval timer (see start method). We need to define it in the constructor, let's say 1 second, because Javascript uses miliseconds the delta is multiplied by a factor of 1000 in the start method.
+Fianally the update method decrease the remaining time by a delta set inside the interval timer (see start method). We need to define it in the constructor, let's say 1 second, because Javascript uses miliseconds the delta is multiplied by a factor of 1000 in the start method.
 
 Let's declare those two new attributes in the constructor by adding this:
 ```js
@@ -122,7 +122,7 @@ const model = new PastaTimer();
 window.model = model;
 ```
 
-This will help us to debug by exposing the model to the global context. Refresh the page.
+We create a new instance of our model and we inject it inside the global context. This will help us to debug. Refresh the page.
 
 In the inspector (right-click), type `model` and press enter. You should see the content of this instance. Check that the remaining time is equal to zero by typing `model.remaining`. We will start the timer without its view by typing `model.start('penne')` and we check that it works by viewing the `remaining` attribute, does it decrease?
 
@@ -165,10 +165,12 @@ function view(model) {
 }
 ```
 
-We just put the same actions like previously in the debug part we did in the inspector. The view shows the remeaning time in seconds and a click on the button start the penne timer. The second argument of the `h()` function is the attributes (optional), we put one onclick attribute with an arrow function associated. The argument `e` is the event triggered by it, which we don't use here. Inside the arrow function we call the model to start the timer. See the [./js/docs/API.md](API) to understand the arguments, the concepts are also useful to understand in details what's going on.
+We just put the same actions like previously in the debug part we did in the inspector. The view shows the remeaning time in seconds and a click on the button starts the penne timer. The second argument of the `h()` function is the attributes (optional), we put one `onclick attribute with an arrow function associated. The argument `e` is the event triggered by it, which we don't use here. Inside the arrow function we call the model to start the timer. See the [./js/docs/API.md](API) to understand the arguments, the concepts are also useful to understand in details what's going on.
 
 Let's add some style with CSS, you will add a `.f1` class on the div which will tell its content to use the font size number one, the biggest.
 
+Do you know how to add this class attribute?
+Try it.
 Is it fine?
 
 Here is the anwser.
@@ -189,12 +191,12 @@ function view(model) {
 ```
 
 This tells:
-* .fill-parent will take the space inside the parent, which is the body here
+* .fill-parent will take all space available inside the parent, which is the body here
 * .flex-column tells to use a vertical layout
 * .items-center centers the content horizontaly (only inside a flexbox)
 * .justify-center  centers the content verticaly (only inside a flexbox)
 
-You can see many possibilities of layout with flexbox inside the showroom here: [http://localhost:9000/css/docs/showroom.html](http://localhost:9000/css/docs/showroom.html).
+You can see many possibilities of layout with flexbox inside the showroom here: [http://localhost:9000/css/docs/showroom.html#flex](http://localhost:9000/css/docs/showroom.html#flex).
 
 We are missing two things: we need to transform the seconds into a readable content and we have more than just a penne pasta timer.
 
