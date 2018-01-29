@@ -11,7 +11,7 @@ This comes from the main usage of this framework at CERN to build applications t
 
 ### Example
 
-```html
+```js
 import {Observable, h, mount} from 'FrontEndKit/js/index.js'
 
 // The model
