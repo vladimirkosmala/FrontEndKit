@@ -1,13 +1,46 @@
-# Front-End Documentation
+# Front-End Kit
 
-Build modern web applications that runs for years.
+Web applications made maintainable. Served hot with a CSS Bootstrap and a React-like template engine.
 
-Compared to other frameworks the main design goal is **maintenance** which is based on:
-* a small API to learn
-* a small code base to audit
+Compared to other frameworks:
+* small API to learn
+* small code base to audit
 * future proof as much as possible
 
 This comes from the main usage of this framework at CERN to build applications that must be running for 10 years with little or no maintenance. So the tools can't change like the rest of the web industry. No JSX, no webpack or any preprocessor but only the minimal packages completed by the large toolbox which is the web standards.
+
+### Example
+
+```html
+import {Observable, h, mount} from 'FrontEndKit/js/index.js'
+
+// The model
+class Model extends Observable {
+  constructor() {
+    super();
+    this.count = 0;
+  }
+
+  increment() {
+    this.count++;
+    this.notify();
+  }
+}
+
+// The view
+function view(model) {
+  return h('.fill-parent.flex-column.items-center.justify-center', [
+    h('h1', 'Hello World'),
+    h('p', `counter value: ${model.count}`),
+    h('div', [
+      h('button.btn', {onclick: e => model.increment()}, '++'),
+    ])
+  ]);
+}
+
+// The controller
+mount(document.body, view, new Model());
+```
 
 ### Reference
 
