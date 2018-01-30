@@ -57,7 +57,7 @@ Create mini applications step by step with explanations.
 
 ### Guides
 
-- [Async calls with fetch (ajax) and websocket](./docs/guides/fetch-websocket.md)
+- [Async calls (ajax)](./docs/guides/fetch-websocket.md)
 - [Scale the code of your application (architecture)](./docs/guides/scale-app.md)
 - [From imperative to reactive programming (jQuery to React)](./docs/guides/reactive-programming.md)
 
