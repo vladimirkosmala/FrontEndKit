@@ -53,6 +53,7 @@ The reference is split in half: CSS and JS.
 
 Create mini applications step by step with explanations.
 
+- Wikipedia API + Interface
 - [Pasta Timer using CSS + JS](./docs/tutorials/pasta-timer.md)
 
 ### Guides
