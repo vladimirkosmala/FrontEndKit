@@ -1,4 +1,4 @@
-# Tutorial
+# Tutorial - Pasta Timer
 
 CSS and JS documentations have their own folders. The current file you are reading is a tutorial combining both of them. You should read the first two to be familiar but it is not mandatory to follow this tutorial.
 

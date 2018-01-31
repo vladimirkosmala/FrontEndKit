@@ -1,4 +1,4 @@
-# Components
+# Guide - Components
 
 Components are pieces of UI like a menu, a form, etc.
 Thanks to Hyperscript a component is a pure function which returns a vnode tree.

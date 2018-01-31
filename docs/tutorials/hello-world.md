@@ -1,4 +1,4 @@
-## Hello World
+## Tutorial - Hello World
 
 This library uses the MVC pattern, let's see the example:
 
@@ -48,7 +48,7 @@ See it in action in your browser:
 ```bash
 cd FrontEndKit
 node serve-folder.js
-open http://localhost:9000/js/docs/introduction/hello-world.html
+open http://localhost:9000/docs/tutorials/hello-world.html
 ```
 
 ### How it works?
