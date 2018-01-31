@@ -64,7 +64,7 @@ Create mini applications step by step with explanations.
 ### Compatibility
 
 - Chrome 62 (end 2017)
-- Firefox 57 (end 2017 - [must activate modules](./js/docs/firefox-modules.md))
+- Firefox 54 (end 2017 - [must activate modules](./js/docs/firefox-modules.md))
 - EDGE 16 (end 2017)
 - Safari 10.1 (2017)
 - iOS Safari (2017)
